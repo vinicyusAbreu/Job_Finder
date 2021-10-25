@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'conteudo' %}
+  <div id="job-view-container" class="container">
+  <div class="row text-center">
+    <a class="back-link main-color" href="{% url 'index' %}">Voltar</a>
+
+      {% for vaga in vagas %}
+        <div id="img-container" class="col-md-12">
+          {% if vaga.imagem_empresa %}
+                <img src="{{vaga.imagem_empresa.url}}" alt="Company">
+          {% else %}
+                <img src="{% static 'img/company.svg' %}" alt="Company">
+          {% endif %}
+        </div>
+        <div class="col-md-12">
+            <h1 class="main-color">{{vaga.titulo_vaga}}</h1>
+            <p class="bold">Quem eles estão buscando:</p>
+            <p class="job-desc">{{vaga.descricao_vaga}}</p>
+            <p><span class="bold">O salário informado é de:</span> {{vaga.salario}}</p>
+            <p>
+              Para trabalhar na <span class="bold main-color">{{vaga.empresa_contratante}}</span> envie um e-mail para a <a class="main-color" href="mailto: {{vaga.email_contato}}">{{vaga.email_contato}}</a>
+            </p>
+        </div>
+      {% endfor %}
+
+
+  </div>
+</div>
+{% endblock 'conteudo' %}

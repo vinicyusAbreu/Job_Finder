@@ -5,6 +5,10 @@
 <hr>
 Um projeto para encontrar vagas de empregos ou adicionar vagas de empregos. Projeto feito utilizando Django.
 
+## ✨ Demonstração
+Veja abaixo um gif do projeto.<br>
+[![Image from Gyazo](https://i.gyazo.com/a804db9e7c5c915871e06602343bd5a1.gif)](https://gyazo.com/a804db9e7c5c915871e06602343bd5a1)
+
 ## Iniciar projeto
 <hr>
 
